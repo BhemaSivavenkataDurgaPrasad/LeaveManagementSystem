@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request</title>
+    <style>
+        table{
+            border:2px solid black;
+            font-size: 25px;
+            border-collapse: collapse;
+            margin-top: 5%;
+            margin-left: 35%;
+
+        }
+        th,td{
+            border:2px solid black;
+            padding: 25px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="POST">
+        {% csrf_token %}
+    <table>
+        <tr>
+            <th> Leave Grant Or not ?</th>
+            <th> <input type="text" name = "grant" ></th>
+            <th> <input type="submit"></th>
+        </tr>
+    </table>
+</form>
+    
+</body>
+</html>

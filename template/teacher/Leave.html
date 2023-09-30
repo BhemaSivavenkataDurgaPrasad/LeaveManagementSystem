@@ -1,0 +1,65 @@
+{% extends 'teacher/Tbase.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        table{
+            border : 2px solid black;
+            border-collapse: collapse;
+            font-size: 25px;
+            margin-top:10% ;
+            margin-left: 35%;
+        }
+        th{
+             
+            padding :20px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method = "POST">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <th colspan="2"> Application From</th>
+            </tr>
+            <tr>
+                <th colspan="2"><hr></th>
+            </tr>
+            <tr>
+                <th>username</th>
+                <th>  {{data.Name}}</th>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <th> {{data.Email}}</th>
+            </tr>
+            <tr>
+                <th> From</th>
+                <th><input type="date" name = "Fdate"></th>
+            </tr>
+            <tr>
+                <th> To </th>
+                <th> <input type="text" name = Tdate></th>
+            </tr>
+            <tr>
+                <th> Reasion </th>
+                <th> <input type="text" name = "reasion"></th>
+            </tr>
+            <tr>
+                <th colspan="2">  <button style="font-size: 20px;">Submit</button></th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
+{% endblock %}

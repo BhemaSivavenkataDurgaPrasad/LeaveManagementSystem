@@ -1,0 +1,31 @@
+{% extends 'pbase.html' %}
+{% block content %}
+<div style="height: 50px; background-color: aquamarine;"> 
+    <marquee behavior="alternate" direction="" style="display: block;"><h1 style="font-size: 25px;">Don,t stop when you’re tired. Stop when you’re done......</h1></marquee>
+</div>
+ 
+    <table style="background-color: rgb(235, 223, 225); margin-top: 50px;" >
+        <thead>
+            <tr>
+                <th colspan="4"> Teacher Details</th>
+            </tr>
+            <tr>
+                <th> Sno </th>
+                <th> username</th>
+                <th> address</th>
+                <th> phoneNumber</th>
+            </tr>
+        </thead>
+            <tbody>
+                {% for i in emp %}
+                <tr>
+                    <th>{{forloop.counter}}</th>
+                    <th> {{i.Name}}</th>
+                    <th> {{i.Address}}</th>
+                    <th> {{i.Phone}}</th>
+                </tr>
+                {% endfor %}
+            </tbody>
+    </table>
+
+{% endblock %}

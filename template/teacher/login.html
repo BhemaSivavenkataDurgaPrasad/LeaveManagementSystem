@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <style>
+        table{
+            border : 2px solid black;
+            font-size: 20px;
+            margin-top: 300px;
+
+             
+        }
+        td{
+              padding: 10px; 
+        }
+    </style>
+</head>
+<body style="background-color: honeydew;">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <center>
+        <table>
+            <tr>
+                <th colspan="2"> Teacher Login Page</th>
+            </tr>
+            <tr>
+                <th colspan="2"><hr></th>
+            </tr>
+            <tr>
+                <td> Name</td>
+                <td> <input type="text" name = "name" required placeholder="Enter the Name"></td>
+            </tr>
+            <tr>
+                <td> Password</td>
+                <td> <input type="password" name = "password" required placeholder="Enter the password"></td>
+            </tr>
+            <tr>
+                <th colspan="2"> <input type="submit" value = 'Submit'></th>
+            </tr>
+        </table>
+    </center>
+    </form>
+    
+</body>
+</html>

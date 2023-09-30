@@ -1,0 +1,59 @@
+{% extends 'pbase.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UserProfile</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        table{
+            border: 2px solid black;
+            font-size: 25px;
+             
+            margin: 10% 40%;
+        }
+        th{
+            padding: 20px;
+             
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method = "POST">
+        {% csrf_token %}
+    <table>
+         <tr>
+            <th colspan="2"> PROFILE </th>
+         </tr>
+         <tr>
+            <th> PrincipalName </th>
+            <th>  <input type="text" name = "name" value = {{obj.Name}}> </th>
+         </tr>
+         <tr>
+            <th> Email </th>
+            <th>  <input type="email" name = "email" value = {{obj.Email}}></th>
+         </tr>
+         <tr>
+            <th> PhoneNumber</th>
+            <th> <input type="tel" name = "phone" value = {{obj.Phone}}></th>
+         </tr>
+         <tr>
+            <th> Address </th>
+            <th> <input type="text" name="address" value = {{obj.Address}}> </th>
+         </tr>
+         <tr>
+            <th colspan="2">  <button style="font-size: 20px;"> Update</button> </th>
+         </tr>
+          
+    </table>
+</form>
+    
+</body>
+</html>
+{% endblock %}

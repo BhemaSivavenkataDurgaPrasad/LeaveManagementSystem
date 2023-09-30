@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    background-color: rgb(191, 150, 230);
+    height: 100px;
+    width: 100%;
+}
+.nav{
+    background-color: rgb(191, 150, 230);
+    height: 52rem;
+    width: 15%;
+    float : left;
+}
+ 
+ul li{
+    padding : 20% 20%;
+     
+}
+.update{
+    
+    display: inline-block;
+    margin-top: 5%;
+    margin-left: 30%;
+    
+     
+    
+}
+table{
+    background-color: rgb(191, 150, 230);
+    border : 2px solid black;
+    border-collapse: collapse;
+    font-size: 25px;
+}
+th{
+    padding: 15px;
+    border : 2px solid black;
+
+}

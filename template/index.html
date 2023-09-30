@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+     
+    <div class="principal">
+    <table>
+        <tr>
+            <th colspan="2"><img src="{% static 'images/logo.jpg' %}" alt=" no-image" height="100px" width="100px" style="border-radius: 80%;"></th >
+        </tr>
+        <tr>
+            <th colspan="2"> princial</th>
+        </tr>
+        <tr>
+            <td>  <a href="{%url 'Principal_login' %}">Login</a></td>
+            <td> <a href="{%url 'Principal_register' %}">Register</a>  </td>
+        </tr>
+    </table>
+ 
+</div>
+     <div class="teachers"> 
+    <table>
+        <tr>
+            <th colspan="2"><img src="{% static 'images/logo.jpg' %}" alt=" no-image" height="100px" width="100px" style="border-radius: 80%;"></th >
+        </tr>
+        <tr>
+            <th colspan="2"> Teachers</th>
+        </tr>
+        <tr>
+            <td> <a href="{%url 'teacher_login' %}">Login</a> </td>
+            <td> <a href="{%url 'teacher_register' %}">Register</a> </td>
+        </tr>
+    </table>
+</div>
+ 
+ 
+
+    
+</body>
+</html>

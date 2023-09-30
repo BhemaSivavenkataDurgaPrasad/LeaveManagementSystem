@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        table{
+            border: 1px solid black;
+            font-size: 25px;
+            margin-top: 200px;
+        }
+        td{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body style="background-color: honeydew;">
+    <form action="" method="POST">
+        {% csrf_token%}
+        <center>
+        <table>
+            <tr>
+                <th colspan="2"> Teacher Register </th>
+            </tr>
+            <tr>
+                <th colspan="2"><hr></th>
+            </tr>
+            <tr>
+                <td> Name </td>
+                <td> <input type="text" name = "name" required placeholder="Enter the Name"></td>
+            </tr>
+            <tr>
+                <td> Email </td>
+                <td> <input type="email" name = "email" required placeholder="Enter the Email"></td>
+            </tr>
+            <tr>
+                <td> PhoneNo </td>
+                <td> <input type="tel" name = "phone" required placeholder="Enter the PhoneNo"></td>
+            </tr>
+            <tr>
+                <td> Address </td>
+                <td> <input type="text" name = "address" required placeholder="Enter the Address"></td>
+            </tr>
+            <tr>
+                <td> Password </td>
+                <td> <input type="password" name = "password" required placeholder="Enter the Password"></td>
+            </tr>
+            <tr>
+                <td> Re-Password </td>
+                <td> <input type="password" name = "repassword" required placeholder="Enter the Password"></td>
+            </tr>
+            <tr>
+                <th colspan="2"> <input type="submit" value = "Submit"></th>
+            </tr>
+        </table>
+    </center>
+    </form>
+</body>
+</html>

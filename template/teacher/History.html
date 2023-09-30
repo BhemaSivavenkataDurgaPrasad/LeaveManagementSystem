@@ -1,0 +1,54 @@
+{% extends 'teacher/Tbase.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave-History</title>
+    <style>
+        table{
+            border:2px solid black;
+            font-size: 25px;
+            border-collapse: collapse;
+            margin-top: 10%;
+            margin-left: 35%;
+
+        }
+        th,td{
+            border:2px solid black;
+            padding: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;"> History Of Teacher</h1>
+    <table>
+        <thead>
+            
+            <th> username </th>
+            <th> FromDate </th>
+            <th> Days</th>
+            <th>Reasion</th>
+            <th>Grant</th>
+        </thead>
+        <tbody>
+             {% for i in data %}
+               
+              {% if obj.Name == i.Name %}
+              <tr>
+                
+                 <td>{{i.Name}}</td>
+                <td> {{i.Fdate}}</td>
+                <td> {{i.Tdata}}</td>
+                <td> {{i.Reasion}}</td>
+                <td> {{ i.Grant}}</td>
+              </tr>
+              {% endif %}
+            {% endfor %}  
+        </tbody>
+    </table>
+    
+</body>
+</html>
+{% endblock %}

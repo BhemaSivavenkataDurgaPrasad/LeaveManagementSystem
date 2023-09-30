@@ -1,0 +1,51 @@
+{% extends 'pbase.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grant</title>
+    <style>
+        table{
+            border:2px solid black;
+            font-size: 25px;
+            border-collapse: collapse;
+            margin-top: 5%;
+            margin-left: 35%;
+
+        }
+        th,td{
+            border:2px solid black;
+            padding: 25px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="4"> Leave Rquests </th>
+            </tr>
+            <tr>
+                <th> username </th>
+                <th> Date </th>
+                <th> Reasion </th>
+                <th>Grant </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in data %}
+            <tr>
+                <td> {{i.Name}}</td>
+                <td> {{i.Fdate}} </td>
+                <td> {{i.Reasion}}</td>
+                <td> <a href="request//{{i.id}}"> <button style="background-color: gold; font-size: 20px;"> Grant </button></a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher</title>
+    <link rel="stylesheet" href="{% static 'css/teacher.css' %}">
+    <style>
+        
+         
+    </style>
+</head>
+<body>
+    <div class="header"> 
+        <center><h2 style="margin-left:65% ;"><span> <a href="">logout</a></span> Username: {{id.Name}}</h2><img src="{% static 'images/user.jpeg' %}" alt="" style="height: 100px; border-radius: 50%; margin-left: 93.5%; margin-top: -1%;"></center>
+         <span class = "school"><img src="{% static 'images/stud.png' %}" alt="" height="150px" style="border-radius: 50%; margin-top: -6%; margin-left: 50px;"></span>
+    </div>
+    
+    <div class="nav">
+        <ul>
+            <li> <a href="pprofile//{{id.id}}"><button style="margin-top: 50px; font-size: 25px; background-color: yellowgreen; padding: 5px; border-radius: 20%;">Principal Profile</button></a> </li>
+            <li>  <a href="grant"> <button style="  font-size: 25px; background-color: yellowgreen; padding: 5px; border-radius: 20%;">Leave Rquests</button></a></li>
+            <li>  <a href="pregister"> <button style="  font-size: 25px; background-color: yellowgreen; padding: 5px; border-radius: 20%;"> Add Teachers</button></a></li>
+            <li> <a href="Thistory"><button style="  font-size: 25px; background-color: yellowgreen; padding: 5px; border-radius: 20%;">teachers Leave-History</button></a></li>
+        </ul>
+    </div>
+ 
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
